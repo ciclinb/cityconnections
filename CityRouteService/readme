@@ -1,0 +1,26 @@
+This project is a RESTful API developed using Spring Boot and using the Maven build tool. For ease of testing and to contain the focus of the project within the specified parameters, security, such as http basic or JWTs, on the API has not been implemented.
+This API returns a string representation of the output as defined in the project requirements: "yes" if the cities are connected. Otherwise, "no". 
+
+A sample of the cities data is in cities.txt in the resources directory of this project. This sample data are used to generate the responses. 
+
+HOW TO START THE APPLICATION
+
+After installing Maven dependencies that have been configured in the project's pom.xml file, the application can be started by running RoutesApplication.java as a Java application. 
+This launches the Spring Boot embedded Tomcat web server on the default port, 8080. 
+
+SUPPORTED HTTP VERBS: GET
+
+EXAMPLE API REQUEST AND RESPONSE
+
+REQUEST:
+http://localhost:8080/connected?origin=chicago&destination=la  
+
+RESPONSE:
+Expected HTTP Status: 200 OK
+
+Expected Response Body:
+
+no
+
+The response is a string representation of the output as defined in the project requirements: "yes" if the cities are connected. Otherwise, "no". No is returned such as when there is no data. The connection data are assumed to be in the resources directory of this project as the file cities.txt, as described above. 
+
